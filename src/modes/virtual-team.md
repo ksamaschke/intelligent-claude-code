@@ -14,16 +14,23 @@ Virtual Team Mode enables structured AI collaboration through specialized roles,
 ## PM Activation Control
 
 **Automatic PM Activation:**
-- **Project Scope** (`/path/to/project/.claude/`): PM activates automatically for all requests
-- **User Scope** (`~/.claude/`): PM requires explicit @PM commands
+- **Project Scope** (`/path/to/project/.claude/`): PM activates automatically for all requests (default: true)
+- **User Scope** (`~/.claude/`): PM requires explicit @PM commands (default: false)
 - **Runtime Toggle**: `@PM always on` or `@PM always off` to change behavior
+- **Detection**: Presence of `.claude/project-context.md` indicates project scope
 
 **When PM is "always on":** Every user request starts with PM analysis and delegation
 **When PM is "always off":** Only @PM commands activate the Project Manager
 
 ### PM ACTIVATION BEHAVIOR INSTRUCTIONS
 
-**CRITICAL: When pm_always_active=true in project context:**
+**SCOPE DETECTION:**
+1. Check if `.claude/project-context.md` exists in working directory
+2. If yes → Project scope (default: pm_always_active=true)
+3. If no → User scope (default: pm_always_active=false)
+4. Read `pm_always_active` setting from project-context.md if present
+
+**CRITICAL: When pm_always_active=true:**
 1. **START EVERY RESPONSE** as @PM analyzing the request
 2. **IDENTIFY** if request is development-related
 3. **DELEGATE** to appropriate specialists immediately
