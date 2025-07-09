@@ -9,7 +9,7 @@
 - @Developer (P: 1.75pts, Q: 1.75pts - Standard, Size: Standard)
 - @User-Role (P: 0.0pts, Q: 0.0pts - Standard, Size: Standard)
 - @System-Engineer (P: 0.25pts, Q: 0.25pts - Standard, Size: Standard)
-- @DevOps-Engineer (P: -3.0pts, Q: -3.0pts - Standard, Size: Standard)
+- @DevOps-Engineer (P: -5.0pts, Q: -5.0pts - Standard, Size: Standard)
 - @Database-Engineer (P: 0.0pts, Q: 0.0pts - Standard, Size: Standard)
 - @Security-Engineer (P: 0.0pts, Q: 0.0pts - Standard, Size: Standard)
 - @AI-Engineer (P: 11.0pts, Q: 12.0pts - Senior, Size: Standard)
@@ -50,6 +50,7 @@
 2025-07-09 08:00:50 - User -> @AI-Engineer-2 - Standard Penalty - Process non-compliance: Implementation without process gates - P: -1.0, Q: 0 - Standard (1.0x)
 2025-07-09 08:00:50 - User -> @AI-Architect - Standard Penalty - Process non-compliance: Implementation without process gates - P: -1.0, Q: 0 - Standard (1.0x)
 2025-07-09 08:00:50 - User -> @PM - Standard Penalty - Process non-compliance: Failed to enforce process gates - P: -1.0, Q: 0 - Standard (1.0x)
+2025-07-09 11:04:26 - User -> @DevOps-Engineer - WTF - Not respecting git_privacy setting (AI mentions in PR) - P: -2.0, Q: -2.0 - Standard (2.0x)
 
 ### Daily Kudos/WTF Quotas
 
